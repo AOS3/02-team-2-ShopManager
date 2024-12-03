@@ -58,3 +58,11 @@
 
 #### 6. 카테고리별 분류
 상품을 상태(판매중, 판매완료)별로 필터링하여 조회할 수 있는 기능입니다.
+
+---
+### 메뉴 구조
+![메뉴구조](https://github.com/user-attachments/assets/14e5b567-bc3e-4e32-9dcd-ab899f5c3e0e)
+### 와이어 프래임
+---
+![와이어 프래임](https://github.com/user-attachments/assets/d9a476cf-02f7-4892-a082-d52df2de7927)
+
