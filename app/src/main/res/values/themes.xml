@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+	<!-- Base application theme. -->
+	<style name="Base.Theme.ShopManager" parent="Theme.Material3.DayNight.NoActionBar">
+		<item name="colorPrimary">@color/black</item>
+		<item name="colorOnPrimary">@color/white</item>
+		<item name="android:colorBackground">@color/white</item>
+	</style>
+
+	<style name="Theme.ShopManager" parent="Base.Theme.ShopManager" />
+	<style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+		<!-- 다이얼로그 테마 설정 -->
+		<item name="materialAlertDialogTheme">@style/CustomMaterialDialogTheme</item>
+	</style>
+
+</resources>

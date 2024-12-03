@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item
+		android:id="@+id/sale_on_modify_menu"
+		android:icon="@drawable/ic_sale_on"
+		android:title="search"
+		app:showAsAction="ifRoom|collapseActionView" />
+
+	<item
+		android:id="@+id/sale_off_modify_menu"
+		android:icon="@drawable/ic_sale_off"
+		android:title="search"
+		app:showAsAction="ifRoom|collapseActionView" />
+
+</menu>

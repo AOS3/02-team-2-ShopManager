@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:transitionGroup="true"
+	tools:context=".ui.show.ShowFragment">
+
+	<ProgressBar
+		android:id="@+id/pb_show"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/cl_loading_show"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<com.google.android.material.appbar.MaterialToolbar
+			android:id="@+id/toolbar_modify"
+			android:layout_width="0dp"
+			android:layout_height="?attr/actionBarSize"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:menu="@menu/toolbar_show"
+			app:navigationIcon="@drawable/ic_back"
+			app:title="상품 정보"
+			tools:title="Show_Fragment" />
+
+		<androidx.appcompat.widget.AppCompatImageButton
+			android:id="@+id/iv_show_back"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:background="?attr/selectableItemBackgroundBorderless"
+			android:clickable="true"
+			android:focusable="true"
+			android:src="@drawable/ic_back"
+			app:layout_constraintBottom_toBottomOf="@id/vp_show"
+			app:layout_constraintEnd_toStartOf="@id/vp_show"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="@id/vp_show" />
+
+
+		<androidx.viewpager2.widget.ViewPager2
+			android:id="@+id/vp_show"
+			android:layout_width="200dp"
+			android:layout_height="200dp"
+			android:layout_marginTop="20dp"
+			android:orientation="horizontal"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/toolbar_modify" />
+
+		<androidx.constraintlayout.widget.Group
+			android:id="@+id/group_show_no_image"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:constraint_referenced_ids="iv_show_no_image,tv_show_no_image" />
+
+		<androidx.constraintlayout.widget.Group
+			android:id="@+id/group_show_arrow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:constraint_referenced_ids="iv_show_back,iv_show_forward" />
+
+		<androidx.constraintlayout.widget.Group
+			android:id="@+id/group_show_yes_image"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:constraint_referenced_ids="vp_show" />
+
+		<ImageView
+			android:id="@+id/iv_show_no_image"
+			android:layout_width="200dp"
+			android:layout_height="200dp"
+			android:orientation="horizontal"
+			android:src="@drawable/ic_no_image"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/toolbar_modify" />
+
+		<TextView
+			android:id="@+id/tv_show_no_image"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="이미지가 없습니다."
+			android:textStyle="bold"
+			app:layout_constraintEnd_toEndOf="@id/iv_show_no_image"
+			app:layout_constraintStart_toStartOf="@id/iv_show_no_image"
+			app:layout_constraintTop_toBottomOf="@id/iv_show_no_image" />
+
+		<androidx.appcompat.widget.AppCompatImageButton
+			android:id="@+id/iv_show_forward"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:background="?attr/selectableItemBackgroundBorderless"
+			android:clickable="true"
+			android:focusable="true"
+			android:src="@drawable/ic_forward"
+			app:layout_constraintBottom_toBottomOf="@id/vp_show"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@id/vp_show"
+			app:layout_constraintTop_toTopOf="@id/vp_show" />
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/tf_show_product_name"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="20dp"
+			android:layout_marginEnd="20dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/vp_show">
+
+			<com.google.android.material.textfield.TextInputEditText
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:enabled="false"
+				android:textColor="@color/black"
+				tools:text="Product: Name" />
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/tf_show_product_price"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="20dp"
+			android:layout_marginEnd="20dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tf_show_product_name">
+
+			<com.google.android.material.textfield.TextInputEditText
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:enabled="false"
+				android:textColor="@color/black"
+				tools:text="Product: Price" />
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/tf_show_product_label"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="20dp"
+			android:layout_marginEnd="20dp"
+			android:layout_marginBottom="20dp"
+			app:layout_constraintBottom_toTopOf="@id/btn_show_modify"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/tf_show_product_price">
+
+			<com.google.android.material.textfield.TextInputEditText
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:enabled="false"
+				android:gravity="top|left"
+				android:inputType="none"
+				android:textColor="@color/black"
+				tools:text="Product: Label" />
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/btn_show_modify"
+			style="@style/BtnSaveStyle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_margin="20dp"
+			android:text="수 정"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+
+			/>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

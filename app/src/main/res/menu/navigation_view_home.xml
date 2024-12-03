@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item android:title="상태 보기">
+		<menu>
+			<item
+				android:id="@+id/show_all"
+				android:icon="@drawable/ic_store"
+				android:title="전체 물품"
+				app:showAsAction="always" />
+		</menu>
+	</item>
+	<item android:title="개별 보기">
+		<menu>
+
+			<item
+				android:id="@+id/show_sale_on"
+				android:icon="@drawable/ic_sale_on"
+				android:title="판매중"
+				app:showAsAction="always" />
+			<item
+				android:id="@+id/show_sale_off"
+				android:icon="@drawable/ic_sale_off"
+				android:title="판매완료"
+				app:showAsAction="always" />
+
+		</menu>
+	</item>
+</menu>
